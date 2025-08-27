@@ -1,0 +1,163 @@
+body {
+    background-image: url(../img/Hintergrund.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 2px 2px 6px gray;
+    color: #333;
+    opacity: 0;
+    transition: opacity 1s ease-in-out 0.3s;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 50px;
+    margin: 20px 0 10px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out 0.6s, transform 1s ease-in-out 0.6s;
+}
+
+body.loaded h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+hr {
+    width: 25%;
+    border: 2px solid #767676;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #000000;
+    margin: 0 auto 40px auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out 0.9s, transform 1s ease-in-out 0.9s;
+}
+
+body.loaded hr {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section {
+    margin-left: 200px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out 1.2s, transform 1s ease-in-out 1.2s;
+}
+
+body.loaded section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h3 {
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 36px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out 1.5s, transform 1s ease-in-out 1.5s;
+}
+
+body.loaded section h3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Vorspeise {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out 1.8s, transform 1s ease-in-out 1.8s;
+}
+
+body.loaded .Vorspeise {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Vorspeise img {
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000000;
+    object-fit: fill;
+    object-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Vorspeise img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.Vorspeise .info {
+    font-size: 28px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out 2.1s, transform 1s ease-in-out 2.1s;
+}
+
+body.loaded .Vorspeise .info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Vorspeise .price {
+    font-weight: 600;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out 2.4s, transform 1s ease-in-out 2.4s;
+}
+
+body.loaded .Vorspeise .price {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-in-out 2.7s, transform 0.8s ease-in-out 2.7s;
+}
+
+body.loaded .Buttons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Buttons button {
+    cursor: pointer;
+    background: #484137;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: lighter;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: background 0.2s, transform 0.2s;
+    padding: 10px 32px;
+    transform: scale(1.10);
+    margin-bottom: 20px;
+}
+
+.Buttons button:hover {
+    background: #9b8a68;
+    transform: scale(1.15);
+}

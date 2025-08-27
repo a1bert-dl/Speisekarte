@@ -1,0 +1,158 @@
+body {
+    background-image: url(../img/Hintergrund.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 2px 2px 6px gray;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 50px;
+    margin: 20px 0 10px 0;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out 0.2s, opacity 0.8s ease-out 0.2s;
+}
+
+body.loaded h2 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+hr {
+    width: 25%;
+    border: 2px solid #767676;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #000000;
+    margin: 0 auto 40px auto;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out 0.4s, opacity 0.8s ease-out 0.4s;
+}
+
+body.loaded hr {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section {
+    margin-left: 200px;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: transform 0.8s ease-out 0.6s, opacity 0.8s ease-out 0.6s;
+}
+
+body.loaded section {
+    transform: translateY(-30px) translateX(0);
+    opacity: 1;
+}
+
+section h3 {
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 36px;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out 0.8s, opacity 0.8s ease-out 0.8s;
+}
+
+body.loaded section h3 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Nachspeise {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out 1s, opacity 0.8s ease-out 1s;
+}
+
+body.loaded .Nachspeise {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Nachspeise img {
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000000;
+    object-fit: fill;
+    object-position: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.Nachspeise img:hover {
+    transform: rotate(3deg);
+    filter: brightness(1.1);
+}
+
+.Nachspeise .info {
+    font-size: 28px;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out 1.2s, opacity 0.8s ease-out 1.2s;
+}
+
+body.loaded .Nachspeise .info {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Nachspeise .price {
+    font-weight: 600;
+    margin-top: 10px;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out 1.4s, opacity 0.8s ease-out 1.4s;
+}
+
+body.loaded .Nachspeise .price {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out 1.6s, opacity 0.8s ease-out 1.6s;
+}
+
+body.loaded .Buttons {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Buttons button {
+    cursor: pointer;
+    background: #484137;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: lighter;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: background 0.2s, transform 0.2s;
+    padding: 10px 32px;
+    transform: scale(1.10);
+    margin-bottom: 20px;
+}
+
+.Buttons button:hover {
+    background: #9b8a68;
+    transform: scale(1.15);
+}
