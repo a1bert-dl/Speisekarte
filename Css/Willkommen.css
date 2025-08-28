@@ -5,36 +5,37 @@ body {
     background-size: cover;
     margin: 0;
     font-family: "Montserrat", sans-serif;
-    text-shadow: 2px 2px 6px gray;
+    text-shadow: 1px 1px 4px gray; /* Reduced shadow for clarity */
     color: #333;
+    min-height: 100vh; /* Ensure body takes full viewport height */
 }
 
 h2 {
     text-align: center;
     font-weight: 400;
-    font-size: 50px;
-    margin: 20px 0 10px 0;
+    font-size: 8vw; /* Scales with viewport width */
+    margin: 3vw 0 2vw 0;
 }
 
 hr {
-    width: 25%;
-    border: 2px solid #767676;
+    width: 50%; /* Wider for better visibility on small screens */
+    border: 1px solid #767676; /* Thinner border */
     border-radius: 50px;
-    box-shadow: 0 0 5px #000000;
-    margin: 0 auto 40px auto;
+    box-shadow: 0 0 3px #000000;
+    margin: 0 auto 6vw auto;
 }
 
 .logo {
-    width: 10%;
-    height: 10%;
-    left: 10%;
+    width: 20%; /* Larger for mobile */
+    height: auto; /* Maintain aspect ratio */
+    left: 5%; /* Adjusted for smaller screens */
     position: absolute;
     transition: all 0.5s ease-out;
 }
 
 .logo:hover {
     transform: rotate(360deg);
-    filter: blur(2px);
+    filter: blur(1px); /* Reduced blur for clarity */
 }
 
 .intro {
@@ -43,26 +44,191 @@ hr {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 20px;
-    word-spacing: 2px;
+    font-size: 4vw; /* Scales with screen size */
+    word-spacing: 1px;
+    padding: 0 5%; /* Add padding for narrow screens */
 }
 
 .intro h3:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     color: rgb(79, 73, 64);
-    word-spacing: 5px;
+    word-spacing: 2px;
 }
 
 .intro h3 {
     transition: all 0.4s ease;
     font-weight: 500;
     width: fit-content;
-    margin-top: 5px;
+    margin-top: 1vw;
 }
 
 .Upper-Gallery {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack images vertically on mobile */
+    align-items: center;
+    gap: 4vw;
+    padding: 0 5%;
+}
+
+.Upper-Gallery img {
+    width: 90vw; /* Full width with some margin */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    filter: brightness(0.9) blur(0.5px);
+}
+
+.Upper-Gallery img:hover {
+    transform: scale(1.03) rotate(1deg) translateY(5px);
+    filter: brightness(1.1);
+}
+
+.Lower-Gallery {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center;
+    gap: 4vw;
+    position: relative;
+    top: 10vw;
+    padding: 0 5%;
+}
+
+.Lower-Gallery img {
+    width: 80vw; /* Slightly smaller than Upper-Gallery */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    filter: brightness(0.9) blur(0.5px);
+}
+
+.Lower-Gallery img:nth-child(2) {
+    filter: brightness(0.9) saturate(0.7);
+}
+
+.Lower-Gallery img:hover {
+    transform: scale(1.03) translateY(-10px) rotate(-1deg);
+    filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.5));
+}
+
+.Navigation {
+    text-align: center;
+    font-size: 5vw; /* Scales with screen */
+    font-weight: 600;
+    margin-top: 8vw;
+    color: #484137;
+    text-shadow: 1px 1px 2px gray;
+    position: relative;
+    top: 12vw;
+}
+
+.Buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    gap: 4vw;
+    position: relative;
+    top: 10vw;
+    padding: 0 5%;
+}
+
+.Buttons button {
+    cursor: pointer;
+    background: #484137;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 5vw; /* Scales with screen */
+    font-weight: lighter;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s, transform 0.2s;
+    padding: 3vw 8vw; /* Larger padding for touch */
+    margin-bottom: 4vw;
+    width: 80%; /* Buttons take most of the width */
+    max-width: 300px; /* Prevent overly wide buttons */
+}
+
+.Buttons button:hover {
+    background: #9b8a68;
+    transform: scale(1.1);
+}
+
+/* Media Queries for Fine-Tuning */
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 7vw;
+    }
+
+    .logo {
+        width: 25%;
+        left: 3%;
+        top: 2%;
+    }
+
+    .intro {
+        font-size: 3.5vw;
+    }
+
+    .Upper-Gallery img,
+    .Lower-Gallery img {
+        width: 85vw;
+    }
+
+    .Navigation {
+        font-size: 4.5vw;
+    }
+
+    .Buttons button {
+        font-size: 4.5vw;
+        padding: 2.5vw 7vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 6vw;
+        margin: 4vw 0;
+    }
+
+    hr {
+        width: 60%;
+    }
+
+    .logo {
+        width: 30%;
+        left: 2%;
+        top: 1%;
+    }
+
+    .intro {
+        font-size: 4vw;
+        padding: 0 8%;
+    }
+
+    .Upper-Gallery img,
+    .Lower-Gallery img {
+        width: 90vw;
+        border-radius: 8px;
+    }
+
+    .Navigation {
+        font-size: 5vw;
+        margin-top: 10vw;
+    }
+
+    .Buttons {
+        gap: 5vw;
+    }
+
+    .Buttons button {
+        font-size: 5vw;
+        padding: 3vw 10vw;
+        width: 90%;
+    }
+}    justify-content: center;
     gap: 20px;
 }
 
@@ -144,4 +310,5 @@ hr {
 .Buttons button:hover {
     background: #9b8a68;
     transform: scale(1.15);
+
 }
